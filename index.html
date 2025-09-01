@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — projects, skills, and contact." />
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header role="banner">
+    <div class="container nav" id="nav">
+      <div class="brand">Your Name</div>
+      <nav aria-label="Primary" class="right">
+        <button class="hamburger" id="navToggle" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+        <ul id="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="theme" class="btn" type="button" aria-pressed="false">Toggle theme</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>Hi, I’m Your Name. I build clean, accessible web experiences.</h1>
+        <p>Frontend developer & aspiring full-stack engineer.</p>
+        <div class="row">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="mailto:you@example.com">Email me</a>
+          <span class="tag">📍 Navi Mumbai, India</span>
+        </div>
+      </div>
+      <figure>
+        <img class="portrait" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=800&auto=format&fit=crop" alt="Laptop on a desk with code on the screen">
+      </figure>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>I’m a developer focused on building accessible, performant interfaces.</p>
+      <div class="skills">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Git & GitHub</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="filters">
+        <button class="btn" data-filter="all" aria-pressed="true">All</button>
+        <button class="btn" data-filter="frontend">Frontend</button>
+        <button class="btn" data-filter="fullstack">Full-stack</button>
+      </div>
+      <div class="grid" id="projectGrid">
+        <article class="card" data-tags="frontend">
+          <img src="https://images.unsplash.com/photo-1551033541-2075d8363c91?q=80&w=1200&auto=format&fit=crop" alt="Screenshot of landing page">
+          <h3>Responsive Landing Page</h3>
+          <p>Built with HTML, CSS, and JS.</p>
+        </article>
+        <article class="card" data-tags="fullstack">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="Terminal window and code editor">
+          <h3>Task Tracker</h3>
+          <p>CRUD app with REST API backend.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button class="btn primary" type="submit">Send</button>
+        <output id="formStatus" role="status"></output>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Your Name</div>
+      <div class="row">
+        <a href="https://github.com/your-username">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-username">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="btn" type="button" aria-label="Scroll to top">↑ Top</button>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
